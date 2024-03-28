@@ -1,0 +1,31 @@
+renameFiles: []
+replaceFiles:
+  - lockblocks.yml
+  - .vscode=
+  - .vscode/setup.sh
+  - .vscode/config.sh
+  - .vscode/tasks.json
+  - .vscode/defsettings.json
+  - rollup.config.js
+  - tsconfig.json
+fillFiles: []
+deleteFiles: []
+excludePaths:
+  - .git
+  - .lockblocks
+  - node_modules
+  - .vscode/settings.json
+updateJson:
+  - path: package.json
+    root:
+      fill: true
+    updateFields:
+      - key: version
+        as: starterVersion
+      - key: scripts
+        merge: true
+      - key: dependencies
+        merge: true
+      - key: devDependencies
+        merge: true
+updateYaml: []
